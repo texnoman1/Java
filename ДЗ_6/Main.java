@@ -30,11 +30,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int userChoise = scanner.nextInt();
         if (userChoise == 1) {
-            System.out.println("Введите объем RAM 4, 8 или 16");
+            System.out.println("Введите минимальный объем RAM 4, 8 или 16");
             Scanner scanner1 = new Scanner(System.in);
             int userChoise1 = scanner.nextInt();
             for (Laptop laptop: laptops){
-                if (laptop.getRam() == userChoise1){
+                if (laptop.getRam() >= userChoise1){
                     System.out.println(laptop);
 
                 }
@@ -44,12 +44,12 @@ public class Main {
            
         
         if (userChoise == 2) {
-            System.out.println("Введите объем HDD gb 1, 2 или 4");
+            System.out.println("Введите минимальный объем HDD gb 1, 2 или 4");
             Scanner scanner2 = new Scanner(System.in);
             int userChoise2 = scanner2.nextInt();
 
             for (Laptop laptop: laptops){
-                if (laptop.getHdd() == userChoise2){
+                if (laptop.getHdd() >= userChoise2){
                     System.out.println(laptop);
 
                 }
@@ -64,7 +64,7 @@ public class Main {
             String userChoise3 = scanner3.nextLine();
 
             for (Laptop laptop: laptops){
-                if (laptop.getOs().equals(userChoise3) ){
+                if (laptop.getOs().equals(userChoise3) ){ //минимальное значение этого параметра не имеет смыслы
                     System.out.println(laptop);
 
                 }
@@ -78,7 +78,7 @@ public class Main {
             String userChoise4 = scanner4.nextLine();
             //System.out.println(userChoise4);
             for (Laptop laptop: laptops){
-                if (laptop.getColor().equals(userChoise4) ){
+                if (laptop.getColor().equals(userChoise4) ){ //минимальное значение этого параметра не имеет смыслы
                     System.out.println(laptop);
 
                 }
